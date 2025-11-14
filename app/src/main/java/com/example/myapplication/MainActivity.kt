@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import NavigationBarExample
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.SystemBarStyle
@@ -14,7 +15,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.myapplication.di.MyHiltViewModel
 import com.example.myapplication.di.MyViewModelI
-import com.example.myapplication.di.MyViewModelImpl
 import com.example.myapplication.ui.layouts.Welcome
 import com.example.myapplication.ui.theme.MyApplicationTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -43,7 +43,8 @@ class MainActivity : ComponentActivity() {
             MyApplicationTheme {
                 Box(modifier = Modifier.fillMaxSize()) {
                     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                        Welcome()
+//                        AppNavigation()
+                        NavigationBarExample()
                     }
                 }
             }
