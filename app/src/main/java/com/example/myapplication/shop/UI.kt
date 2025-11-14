@@ -165,7 +165,7 @@ fun MyOutlinedTextField(onSearch: (String) -> Unit) {
             text = it
             onSearch(it)
         },
-        label = { Text("Enter your name") }
+        label = { Text("Enter search") }
     )
 }
 
