@@ -75,6 +75,19 @@ dependencies {
     implementation("androidx.compose.ui:ui:1.6.0")
     implementation("androidx.compose.material:material:1.6.0")
     implementation("androidx.compose.material3:material3:1.2.0")
+
+    implementation("io.coil-kt.coil3:coil-compose:3.0.0") // Use the latest stable version
+//    implementation("io.coil-kt.coil3:coil-network-okhttp:3.3.0") // Optional, for network requests
+
+//    implementation("io.coil-kt.coil3:coil-compose:3.3.0") // Or the latest version
+//    implementation("io.coil-kt.coil3:coil-network-okhttp:3.3.0") // For network image loading
+
 // or a newer version
 // Or the latest stable version
+    implementation("com.github.bumptech.glide:glide:4.16.0") // Use the latest stable version
+    // Glide's annotation processor (if you're using annotations for @GlideModule etc.)
+    kapt("com.github.bumptech.glide:compiler:4.16.0") // Use the same version as glide
+    // Glide's Compose integration library
+    implementation("com.github.bumptech.glide:compose:1.0.0-beta01") // Use the latest stable version
+
 }

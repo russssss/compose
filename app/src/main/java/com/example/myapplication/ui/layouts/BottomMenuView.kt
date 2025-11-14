@@ -1,6 +1,4 @@
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountBox
@@ -22,7 +20,6 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
@@ -32,36 +29,9 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-
-@Composable
-fun Shop(modifier: Modifier = Modifier) {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Text("Album Screen")
-    }
-}
-
-@Composable
-fun Favorite(modifier: Modifier = Modifier) {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Text("Album Screen")
-    }
-}
-
-@Composable
-fun Profile(modifier: Modifier = Modifier) {
-    Box(
-        modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
-    ) {
-        Text("Playlist Screen")
-    }
-}
+import com.example.myapplication.favorites.Favorite
+import com.example.myapplication.profile.ProfileLayout
+import com.example.myapplication.shop.Shop
 
 enum class Destination(
     val route: String,
@@ -88,7 +58,7 @@ fun AppNavHost(
                 when (destination) {
                     Destination.SONGS -> Shop()
                     Destination.ALBUM -> Favorite()
-                    Destination.PLAYLISTS -> Profile()
+                    Destination.PLAYLISTS -> ProfileLayout()
                 }
             }
         }
